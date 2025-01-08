@@ -1,6 +1,6 @@
 import { StatusBar } from "expo-status-bar";
 import { useState } from "react";
-import { View, Text, Image, ScrollView, ImageBackground, Button, Pressable, Modal } from "react-native";
+import { View, Text, Image, ScrollView, ImageBackground, Button, Pressable, Modal, ActivityIndicator } from "react-native";
 
 const logoImg = require("./assets/adaptive-icon.png");
 
@@ -8,7 +8,9 @@ export default function App() {
   {/* const [isModalVisible, setModalVisible] = useState(false); */}
   return (
     <View  style={{ flex: 1, backgroundColor: "plum", padding: 60 }}>
-      <StatusBar style="auto" backgroundColor="lightgreen" barstyle="light-content"/>
+      <ActivityIndicator />
+      <ActivityIndicator size="large" color="blue" />
+      {/* <StatusBar style="auto" backgroundColor="lightgreen" barstyle="light-content"/> */}
     </View>
 
 ) 
