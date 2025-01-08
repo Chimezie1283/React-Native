@@ -1,14 +1,21 @@
+import { StatusBar } from "expo-status-bar";
 import { useState } from "react";
 import { View, Text, Image, ScrollView, ImageBackground, Button, Pressable, Modal } from "react-native";
 
 const logoImg = require("./assets/adaptive-icon.png");
 
 export default function App() {
-  const [isModalVisible, setModalVisible] = useState(false);
+  {/* const [isModalVisible, setModalVisible] = useState(false); */}
   return (
     <View  style={{ flex: 1, backgroundColor: "plum", padding: 60 }}>
-      <Button 
-      title="Click Me" 
+      <StatusBar style="auto" backgroundColor="lightgreen" barstyle="light-content"/>
+    </View>
+
+) 
+
+}
+     {/*  <Button 
+      title="Click Me now" 
       onPress={() => setModalVisible(true)} 
       color="midnightblue"
       /> 
@@ -41,8 +48,6 @@ export default function App() {
   </ImageBackground>
       </ScrollView> */}
     
-  </View>
+ 
 
-  ) 
-
-}
+ 
