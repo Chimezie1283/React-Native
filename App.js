@@ -1,6 +1,6 @@
 import { StatusBar } from "expo-status-bar";
 import { useState } from "react";
-import { View, Text, Image, ScrollView, ImageBackground, Button, Pressable, Modal, ActivityIndicator } from "react-native";
+import { View, Text, Image, ScrollView, ImageBackground, Button, Pressable, Modal, ActivityIndicator, Alert } from "react-native";
 
 const logoImg = require("./assets/adaptive-icon.png");
 
@@ -8,14 +8,30 @@ export default function App() {
   {/* const [isModalVisible, setModalVisible] = useState(false); */}
   return (
     <View  style={{ flex: 1, backgroundColor: "plum", padding: 60 }}>
-      <ActivityIndicator />
-      <ActivityIndicator size="large" color="blue" />
-      {/* <StatusBar style="auto" backgroundColor="lightgreen" barstyle="light-content"/> */}
+     <Button title="Alert" onPress={() => Alert.alert("Invaalid Data")}/>
+     <Button title="Alert 2 " onPress={() => Alert.alert("Invaalid Data", "Date of Birth is incorrect")}/>
+
+     <Button 
+     title="Alert" 
+     onPress={() => Alert.alert("Invaalid Data", "Date of Birth is incorrect", [
+      {
+        text: "Cancel",
+        onPress: () => alert("Cancel Pressed")
+      },
+      {
+        text: "OK",
+        onPress: () => console.log("OK Pressed")
+      }
+     ])}/>
     </View>
 
 ) 
 
 }
+
+   {/* <ActivityIndicator />
+      <ActivityIndicator size="large" color="blue" />
+       <StatusBar style="auto" backgroundColor="lightgreen" barstyle="light-content"/> */}
      {/*  <Button 
       title="Click Me now" 
       onPress={() => setModalVisible(true)} 
