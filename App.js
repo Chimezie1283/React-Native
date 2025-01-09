@@ -1,14 +1,24 @@
 import { StatusBar } from "expo-status-bar";
 import { useState } from "react";
 import { View, Text, Image, ScrollView, ImageBackground, Button, Pressable, Modal, ActivityIndicator, Alert } from "react-native";
+import Greet from "./Components/Greet";
 
-const logoImg = require("./assets/adaptive-icon.png");
+ {/*const logoImg = require("./assets/adaptive-icon.png"); */}
 
 export default function App() {
   {/* const [isModalVisible, setModalVisible] = useState(false); */}
   return (
     <View  style={{ flex: 1, backgroundColor: "plum", padding: 60 }}>
-     <Button title="Alert" onPress={() => Alert.alert("Invaalid Data")}/>
+     <Greet name="Agbo Chimezie" />
+     <Greet name="Ogbija Victory" />
+    </View>
+
+) 
+
+}
+
+   {/*
+    <Button title="Alert" onPress={() => Alert.alert("Invaalid Data")}/>
      <Button title="Alert 2 " onPress={() => Alert.alert("Invaalid Data", "Date of Birth is incorrect")}/>
 
      <Button 
@@ -23,13 +33,7 @@ export default function App() {
         onPress: () => console.log("OK Pressed")
       }
      ])}/>
-    </View>
-
-) 
-
-}
-
-   {/* <ActivityIndicator />
+    <ActivityIndicator />
       <ActivityIndicator size="large" color="blue" />
        <StatusBar style="auto" backgroundColor="lightgreen" barstyle="light-content"/> */}
      {/*  <Button 
